@@ -1,0 +1,112 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for br.com.battista.web:portaltour-war:war:1.0.0
+[WARNING] 'dependencies.dependency.systemPath' for jsf:hack.javax.faces:jar should not point at files within the project directory, ${basedir}/src/main/webapp/WEB-INF/lib/hack.javax.faces-2.2.4.jar will be unresolvable by dependent projects @ line 65, column 16
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Portal Tour - BASE
+[INFO] Portal Tour - Module JAR
+[INFO] Portal Tour - Module WAR
+[INFO] Portal Tour - Module EAR
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Portal Tour - BASE 1.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Portal Tour - Module JAR 1.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ portaltour-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ portaltour-core ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ portaltour-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ portaltour-core ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ portaltour-core ---
+[INFO] Surefire report directory: D:\dev\java\src\eclipse_old\portaltour\portaltour-core\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.5:jar (default-jar) @ portaltour-core ---
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Portal Tour - Module WAR 1.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ portaltour-war ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory D:\dev\java\src\eclipse_old\portaltour\portaltour-war\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ portaltour-war ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ portaltour-war ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory D:\dev\java\src\eclipse_old\portaltour\portaltour-war\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ portaltour-war ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ portaltour-war ---
+[INFO] 
+[INFO] --- maven-war-plugin:2.4:war (default-war) @ portaltour-war ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [portaltour-war] in [D:\dev\java\src\eclipse_old\portaltour\portaltour-war\target\portaltour-war-1.0.0]
+[INFO] Processing war project
+[INFO] Copying webapp webResources [D:\dev\java\src\eclipse_old\portaltour\portaltour-war/src/main/webapp/WEB-INF] to [D:\dev\java\src\eclipse_old\portaltour\portaltour-war\target\portaltour-war-1.0.0]
+[INFO] Copying webapp resources [D:\dev\java\src\eclipse_old\portaltour\portaltour-war\src\main\webapp]
+[INFO] Webapp assembled in [153 msecs]
+[INFO] Building war: D:\dev\java\src\eclipse_old\portaltour\portaltour-war\target\portaltour-war-1.0.0.war
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Portal Tour - Module EAR 1.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-ear-plugin:2.9.1:generate-application-xml (default-generate-application-xml) @ portaltour-ear ---
+[INFO] Generating application.xml
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.3:resources (default-resources) @ portaltour-ear ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory D:\dev\java\src\eclipse_old\portaltour\portaltour-ear\src\main\resources
+[INFO] 
+[INFO] --- maven-ear-plugin:2.9.1:ear (default-ear) @ portaltour-ear ---
+[INFO] Copying artifact [war:br.com.battista.web:portaltour-war:1.0.0] to [portaltour-war-1.0.0.war] (unpacked)
+[INFO] Copy ear sources to D:\dev\java\src\eclipse_old\portaltour\portaltour-ear\target\portaltour-ear-1.0.0
+[INFO] Including custom manifest file [D:\dev\java\src\eclipse_old\portaltour\portaltour-ear\target\portaltour-ear-1.0.0\META-INF\MANIFEST.MF]
+[INFO] Building jar: D:\dev\java\src\eclipse_old\portaltour\portaltour-ear\target\portaltour-ear-1.0.0.ear
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] Portal Tour - BASE ................................ SUCCESS [0.001s]
+[INFO] Portal Tour - Module JAR .......................... SUCCESS [2.525s]
+[INFO] Portal Tour - Module WAR .......................... SUCCESS [2.037s]
+[INFO] Portal Tour - Module EAR .......................... SUCCESS [2.327s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 7.079s
+[INFO] Finished at: Sat Aug 23 04:29:16 BRT 2014
+[INFO] Final Memory: 12M/158M
+[INFO] ------------------------------------------------------------------------

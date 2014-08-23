@@ -1,0 +1,99 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Portal Tour - Module EAR 1.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> appengine-maven-plugin:1.9.9:update (default-cli) @ portaltour-ear >>>
+[WARNING] The POM for br.com.battista.web:portaltour-war:war:1.0.0 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[INFO] 
+[INFO] --- maven-ear-plugin:2.9.1:generate-application-xml (default-generate-application-xml) @ portaltour-ear ---
+[INFO] Generating application.xml
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.3:resources (default-resources) @ portaltour-ear ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory D:\dev\java\src\eclipse_old\portaltour\portaltour-ear\src\main\resources
+[INFO] 
+[INFO] --- maven-ear-plugin:2.9.1:ear (default-ear) @ portaltour-ear ---
+[INFO] Copying artifact [war:br.com.battista.web:portaltour-war:1.0.0] to [portaltour-war-1.0.0.war] (unpacked)
+[INFO] Copy ear sources to D:\dev\java\src\eclipse_old\portaltour\portaltour-ear\target\portaltour-ear-1.0.0
+[INFO] Including custom manifest file [D:\dev\java\src\eclipse_old\portaltour\portaltour-ear\target\portaltour-ear-1.0.0\META-INF\MANIFEST.MF]
+[INFO] Building jar: D:\dev\java\src\eclipse_old\portaltour\portaltour-ear\target\portaltour-ear-1.0.0.ear
+[INFO] 
+[INFO] <<< appengine-maven-plugin:1.9.9:update (default-cli) @ portaltour-ear <<<
+[INFO] 
+[INFO] --- appengine-maven-plugin:1.9.9:update (default-cli) @ portaltour-ear ---
+[INFO] 
+[INFO] Google App Engine Java SDK - Updating Application
+[INFO] 
+[INFO] Retrieving Google App Engine Java SDK from Maven
+[INFO] Updating Google App Engine Application
+[INFO] Running --oauth2 update D:\dev\java\src\eclipse_old\portaltour\portaltour-ear\target/portaltour-ear-1.0.0
+Reading application configuration data...
+Ago 23, 2014 4:01:55 AM com.google.apphosting.utils.config.AppEngineWebXmlReader readAppEngineWebXml
+INFORMAÇÕES: Successfully processed D:\dev\java\src\eclipse_old\portaltour\portaltour-ear\target\portaltour-ear-1.0.0\portaltour-war-1.0.0.war\WEB-INF/appengine-web.xml
+Ago 23, 2014 4:01:55 AM com.google.apphosting.utils.config.AbstractConfigXmlReader readConfigXml
+INFORMAÇÕES: Successfully processed D:\dev\java\src\eclipse_old\portaltour\portaltour-ear\target\portaltour-ear-1.0.0\portaltour-war-1.0.0.war\WEB-INF/web.xml
+Processing module default
+Ago 23, 2014 4:01:55 AM com.google.apphosting.utils.config.AppEngineWebXmlReader readAppEngineWebXml
+INFORMAÇÕES: Successfully processed D:/dev/java/src/eclipse_old/portaltour/portaltour-ear/target/portaltour-ear-1.0.0/portaltour-war-1.0.0.war\WEB-INF/appengine-web.xml
+Ago 23, 2014 4:01:55 AM com.google.apphosting.utils.config.AbstractConfigXmlReader readConfigXml
+INFORMAÇÕES: Successfully processed D:/dev/java/src/eclipse_old/portaltour/portaltour-ear/target/portaltour-ear-1.0.0/portaltour-war-1.0.0.war\WEB-INF/web.xml
+Ignoring application.xml context-root element, for details see https://developers.google.com/appengine/docs/java/modules/#config
+
+
+Beginning interaction for module default...
+Ago 23, 2014 4:01:55 AM com.google.appengine.tools.admin.AbstractServerConnection send1
+ADVERTÊNCIA: Error posting to URL: https://appengine.google.com/api/appversion/getresourcelimits?app_id=portaltour&version=%24%7Bappengine.app.version%7D&
+404 Not Found
+This application does not exist (app_id=u'portaltour').
+This is try #0
+Ago 23, 2014 4:01:56 AM com.google.appengine.tools.admin.AbstractServerConnection send1
+ADVERTÊNCIA: Error posting to URL: https://appengine.google.com/api/appversion/getresourcelimits?app_id=portaltour&version=%24%7Bappengine.app.version%7D&
+404 Not Found
+This application does not exist (app_id=u'portaltour').
+This is try #1
+Ago 23, 2014 4:01:56 AM com.google.appengine.tools.admin.AbstractServerConnection send1
+ADVERTÊNCIA: Error posting to URL: https://appengine.google.com/api/appversion/getresourcelimits?app_id=portaltour&version=%24%7Bappengine.app.version%7D&
+404 Not Found
+This application does not exist (app_id=u'portaltour').
+This is try #2
+Ago 23, 2014 4:01:56 AM com.google.appengine.tools.admin.AbstractServerConnection send1
+ADVERTÊNCIA: Error posting to URL: https://appengine.google.com/api/appversion/getresourcelimits?app_id=portaltour&version=%24%7Bappengine.app.version%7D&
+404 Not Found
+This application does not exist (app_id=u'portaltour').
+This is try #3
+0% Created staging directory at: 'C:\Users\Rafa\AppData\Local\Temp\appcfg2417500327946978839.tmp'
+5% Scanning for jsp files.
+20% Scanning files on local disk.
+25% Initiating update.
+Ago 23, 2014 4:01:57 AM com.google.appengine.tools.admin.AbstractServerConnection send1
+ADVERTÊNCIA: Error posting to URL: https://appengine.google.com/api/appversion/create?app_id=portaltour&version=%24%7Bappengine.app.version%7D&
+404 Not Found
+This application does not exist (app_id=u'portaltour').
+This is try #0
+Ago 23, 2014 4:01:57 AM com.google.appengine.tools.admin.AbstractServerConnection send1
+ADVERTÊNCIA: Error posting to URL: https://appengine.google.com/api/appversion/create?app_id=portaltour&version=%24%7Bappengine.app.version%7D&
+404 Not Found
+This application does not exist (app_id=u'portaltour').
+This is try #1
+Ago 23, 2014 4:01:58 AM com.google.appengine.tools.admin.AbstractServerConnection send1
+ADVERTÊNCIA: Error posting to URL: https://appengine.google.com/api/appversion/create?app_id=portaltour&version=%24%7Bappengine.app.version%7D&
+404 Not Found
+This application does not exist (app_id=u'portaltour').
+This is try #2
+Ago 23, 2014 4:01:58 AM com.google.appengine.tools.admin.AbstractServerConnection send1
+ADVERTÊNCIA: Error posting to URL: https://appengine.google.com/api/appversion/create?app_id=portaltour&version=%24%7Bappengine.app.version%7D&
+404 Not Found
+This application does not exist (app_id=u'portaltour').
+This is try #3
+
+com.google.appengine.tools.admin.HttpIoException: Error posting to URL: https://appengine.google.com/api/appversion/create?app_id=portaltour&version=%24%7Bappengine.app.version%7D&
+404 Not Found
+This application does not exist (app_id=u'portaltour').
+
+Unable to update app: Error posting to URL: https://appengine.google.com/api/appversion/create?app_id=portaltour&version=%24%7Bappengine.app.version%7D&
+404 Not Found
+This application does not exist (app_id=u'portaltour').
+
+Please see the logs [C:\Users\Rafa\AppData\Local\Temp\appcfg7485519306115347399.log] for further information.

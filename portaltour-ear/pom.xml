@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>portaltour-ear</artifactId>
+	<packaging>ear</packaging>
+	<name>Portal Tour - Module EAR</name>
+	<description>Modulo ear para agrupar os modulos e gerar o arquivo para deploy.</description>
+
+	<parent>
+		<groupId>br.com.battista.web</groupId>
+		<artifactId>portaltour</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<repositories>
+		<repository>
+			<id>JBoss</id>
+			<name>JBoss</name>
+			<url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+		</repository>
+	</repositories>
+
+	<properties>
+		<maven.ear.plugin.version>2.9.1</maven.ear.plugin.version>
+		<ear.version>5</ear.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>br.com.battista.web</groupId>
+			<artifactId>portaltour-war</artifactId>
+			<type>war</type>
+		</dependency>
+
+		<dependency>
+			<groupId>br.com.battista.web</groupId>
+			<artifactId>portaltour-core</artifactId>
+			<type>jar</type>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>${maven.ear.plugin.version}</version>
+				<configuration>
+					<version>${ear.version}</version>
+					<defaultLibBundleDir>lib</defaultLibBundleDir>
+					<unpackTypes>war</unpackTypes>
+					<modules>
+						<jarModule>
+							<groupId>br.com.battista.web</groupId>
+							<artifactId>portaltour-core</artifactId>
+							<includeInApplicationXml>true</includeInApplicationXml>
+						</jarModule>
+						<webModule>
+							<groupId>br.com.battista.web</groupId>
+							<artifactId>portaltour-war</artifactId>
+							<contextRoot>/portal-tour</contextRoot>
+							<unpack>true</unpack>
+						</webModule>
+					</modules>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>com.google.appengine</groupId>
+				<artifactId>appengine-maven-plugin</artifactId>
+			</plugin>
+
+		</plugins>
+	</build>
+
+</project>

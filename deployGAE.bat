@@ -1,0 +1,1 @@
+appcfg.cmd -A portal-tour -V 1 update ./portaltour-ear/target/portaltour-ear-1.0.0

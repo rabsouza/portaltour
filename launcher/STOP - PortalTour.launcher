@@ -1,0 +1,17 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Portal Tour - Module EAR 1.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- appengine-maven-plugin:1.9.9:devserver_stop (default-cli) @ portaltour-ear ---
+[INFO] 
+[INFO] Google App Engine Java SDK - Stopping the Development Server
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.387 s
+[INFO] Finished at: 2014-08-23T04:34:15-03:00
+[INFO] Final Memory: 7M/122M
+[INFO] ------------------------------------------------------------------------
