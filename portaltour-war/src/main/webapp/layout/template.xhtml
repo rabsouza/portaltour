@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<f:view>
+		<h:head>
+			<title><ui:insert name="pageTitle"/></title>
+	
+			<link rel="icon" type="image/vnd.microsoft.icon"
+				href="#{request.contextPath}/resources/images/favicon.ico" />
+			<link rel="SHORTCUT ICON" type="image/vnd.microsoft.icon"
+				href="#{request.contextPath}/resources/images/favicon.ico" />
+	
+			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+			<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+			<meta name="description"
+				content="Portal de vendas de pacotes de turismo!" />
+			<meta name="keywords" content="pacotes, turismo, tour, viajar" />
+			<meta name="author" content="rabsouza" />
+	
+			<h:outputStylesheet library="bootstrap/css" name="bootstrap.min.css" />
+			<h:outputStylesheet library="bootstrap/css" name="bootstrap-theme.min.css" />
+			<h:outputStylesheet library="app/css" name="portaltour.css" />
+		</h:head>
+	
+		<h:body>
+			<div class="container">
+				<ui:insert name="bodyContent"></ui:insert>
+	
+				<footer>
+					<p><em><h:outputText value="#{msg['app.footer']}" /></em></p>
+				</footer>
+			</div>
+	
+			<h:outputScript library="resources/jquery/js" name="jquery.min.js" />
+			<h:outputScript library="bootstrap/js" name="bootstrap.min.js" />
+			<h:outputScript library="vendor/js" name="modernizr-2.6.2-respond-1.1.0.min.js" />
+			<h:outputScript library="vendor/js" name="plugins.js" />
+			<h:outputScript library="app/js" name="portaltour.js" />
+		</h:body>
+
+</f:view>
+</html>

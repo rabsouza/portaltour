@@ -3,18 +3,21 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
 	version="2.2">
-	
+
 	<application>
 		<!-- Configura o locale (i18n) pt-BR para toda aplicacao. -->
 		<locale-config>
 			<default-locale>pt_BR</default-locale>
 		</locale-config>
 
-		<!-- Define o nome do arquivo com as labels e mensagens. Note que 'msg' 
-			eh a variavel usada nas telas pra recuperar as labels/mensagens. -->
+		<!-- Define o nome do arquivo com as labels e mensagens. -->
 		<resource-bundle>
 			<base-name>messages</base-name>
 			<var>msg</var>
+		</resource-bundle>
+		<resource-bundle>
+			<base-name>texts</base-name>
+			<var>txt</var>
 		</resource-bundle>
 	</application>
 

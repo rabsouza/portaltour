@@ -16,13 +16,15 @@
 package br.com.battista.web.config;
 
 import java.util.Map;
-import java.util.logging.Logger;
 
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 import javax.faces.event.PhaseEvent;
 import javax.faces.event.PhaseId;
 import javax.faces.event.PhaseListener;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 /**
  * PhaseListener to ensure the HttpSession data is written to the datastore.
@@ -49,13 +51,12 @@ public class SessionPhaseListener implements PhaseListener {
 	private static final long serialVersionUID = -2499638109364505939L;
 
 	/** Used in object serialization */
-	private static final String _CLASS = SessionPhaseListener.class.getName();
-	private static final Logger logger = Logger.getLogger(_CLASS);
+	private static final Logger LOGGER = LogManager.getLogger(SessionPhaseListener.class.getName());
 	private static final String TIME_KEY = "NOW";
 
 	@Override
 	public void afterPhase(PhaseEvent event) {
-		logger.entering(_CLASS, "afterPhase(PhasseEvent)", event);
+		LOGGER.trace(String.format("init: afterPhase(PhasseEvent)", event));
 		FacesContext ctx = null;
 		ExternalContext eCtx = null;
 		Map<String, Object> sessionMap = null;
@@ -64,21 +65,21 @@ public class SessionPhaseListener implements PhaseListener {
 		eCtx = ctx.getExternalContext();
 		sessionMap = eCtx.getSessionMap();
 		sessionMap.put(TIME_KEY, System.currentTimeMillis());
-		logger.exiting(_CLASS, "afterPhase(PhaseEvent)");
+		LOGGER.trace("exit: afterPhase(PhaseEvent)");
 	}
 
 	@Override
 	public void beforePhase(PhaseEvent event) {
-		logger.entering(_CLASS, "beforePhase(PhaseEvent)", event);
-		logger.exiting(_CLASS, "beforePhase(PhaseEvent)");
+		LOGGER.trace(String.format("init: beforePhase(PhaseEvent): %s", event));
+		LOGGER.trace(String.format("exit: beforePhase(PhaseEvent)"));
 
 	}
 
 	@Override
 	public PhaseId getPhaseId() {
-		logger.entering(_CLASS, "getPhaseId(PhasseEvent)");
+		LOGGER.trace(String.format("init: getPhaseId(PhasseEvent)"));
 		PhaseId phaseId = PhaseId.ANY_PHASE;
-		logger.exiting(_CLASS, "getPhaseId(PhaseEvent)", phaseId);
+		LOGGER.trace(String.format("exit: getPhaseId(PhaseEvent): %s", phaseId));
 		return phaseId;
 	}
 }

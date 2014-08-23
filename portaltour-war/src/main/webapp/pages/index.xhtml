@@ -6,9 +6,12 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 
-<ui:composition template="../resources/template.xhtml">
-	<ui:define name="body-content">
-		<h1><h:outputText value="PortalTour - Template de aplicação GAE com JSF" /></h1>
+<ui:composition template="../layout/template.xhtml">
+
+	<ui:define name="pageTitle"><h:outputText value="#{msg['app.title']}" /> - <h:outputText value="#{msg['client.title']}" /></ui:define>
+
+	<ui:define name="bodyContent">
+		<h1>#{indexViewMB.dto.usuario} - <h:outputText value="Bem vindo!" /></h1>
 		<div class="row">
 			<div class="col-md-4">
 				<h2>Heading</h2>
