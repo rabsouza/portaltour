@@ -3,7 +3,6 @@
 #################
 
 *.pydevproject
-.project
 .metadata
 bin/
 tmp/
@@ -24,15 +23,9 @@ local.properties
 */build/*
 */classes/*
 *Thumbs.db
-*.jar
-*.war
-*.ear
 
 # External tool builders
 .externalToolBuilders/
-
-# Locally stored "Eclipse launch configurations"
-*.launch
 
 # CDT-specific
 .cproject
@@ -70,13 +63,10 @@ local.properties
 *.tlb
 *.tli
 *.tlh
-*.tmp
 *.vspscc
 .builds
 *.dotCover
 
-## TODO: If you have NuGet Package Restore enabled, uncomment this
-#packages/
 
 # Visual C++ cache files
 ipch/
@@ -111,7 +101,6 @@ publish
 # Others
 [Bb]in
 [Oo]bj
-sql
 TestResults
 *.Cache
 ClientBin
@@ -148,12 +137,9 @@ Desktop.ini
 # Packages
 *.egg
 *.egg-info
-dist
 build
 eggs
 parts
-bin
-var
 sdist
 develop-eggs
 .installed.cfg
@@ -173,6 +159,3 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
-/portaltour-core
-/portaltour-ear
-/portaltour-war

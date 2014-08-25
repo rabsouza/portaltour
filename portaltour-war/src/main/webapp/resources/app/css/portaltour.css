@@ -1,0 +1,43 @@
+body{
+	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*! 
+	CCS - resources/template.xhtml
+*/
+
+body > .jumbotron{
+	padding-top: 20px !important; 
+	padding-bottom: 0px !important; 
+	margin-bottom: 20px !important;
+}
+
+body > .jumbotron > h1{
+	font-weight: bold !important; 
+	text-shadow: #ACA5A5 0.2em 0.1em 0.2em !important;
+}
+
+body > .jumbotron > .container > .row > .nav > li{
+	font-weight: bold !important; 
+}
+
+body > .jumbotron > .panel-heading{
+	font-weight: bold !important; 
+}
+
+body > .container.body{
+	margin-bottom: 20px !important;
+}
+
+/*! 
+	CCS - pages/index.xhtml
+*/
+
+body > .carousel-inner > .item > img, .carousel-inner > .item > a > img{
+	border-width: 2px !important;
+	border-style: groove !important;
+}
+
+body > .carousel-caption > h3, body > .carousel-caption > p {
+	color: #ACA5A5;
+}
