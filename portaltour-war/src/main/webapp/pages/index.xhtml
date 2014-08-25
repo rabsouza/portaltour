@@ -8,18 +8,56 @@
 
 <ui:composition template="../layout/template.xhtml">
 
-	<ui:define name="pageTitle"><h:outputText value="#{msg['app.title']}" /> - <h:outputText value="#{msg['client.title']}" /></ui:define>
+	<ui:define name="pageTitle"><h:outputText value="#{msg['app.title']}" /> - <h:outputText value="#{msg['app.client.title']}" /></ui:define>
 
 	<ui:define name="bodyContent">
-		<h1>#{indexViewMB.dto.usuario} - <h:outputText value="Bem vindo!" /></h1>
 		<div class="row">
-			<div class="col-md-4">
-				<h2>Heading</h2>
-				<p>Donec id elit non mi porta gravida at eget metus. Fusce
-					dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-					ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
-					magna mollis euismod. Donec sed odio dui.</p>
-				<p><h:link styleClass="btn btn-default" value="View details &raquo;"/></p>
+			<div class="col-sm-8 col-sm-offset-2">
+				<div id="myCarousel" class="carousel slide" data-interval="10000" data-ride="carousel" pause="hover">
+					<!-- Carousel indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+					</ol>   
+				   <!-- Carousel items -->
+					<div class="carousel-inner">
+						<div class="active item" style="height: 400px;">
+							<h:link>
+								<h:graphicImage value="/resources/images/slide-cabo-frio.png" />
+							</h:link> 
+							<div class="carousel-caption">
+							  <h3>Cabo Frio RJ - 10/02 > 14/02</h3>
+							  <p>Praia do Forte um dos mais belos cartões postais do litoral do Brasil.</p>
+							</div>
+						</div>
+						<div class="item" style="height: 400px;">
+							<h:link>
+								<h:graphicImage value="/resources/images/slide-guarapari.png" />
+							</h:link>
+							<div class="carousel-caption">
+							  <h3>Guarapari ES - 12/04 > 20/04</h3>
+							  <p>Guarapari está entre as cidades do litoral do Espírito Santo que melhor combina lazer com infraestrutura.</p>
+							</div>
+						</div>
+						<div class="item" style="height: 400px;">
+							<h:link>
+								<h:graphicImage value="/resources/images/slide-caldas-novas.png" style="align:center;"/>
+							</h:link>
+							<div class="carousel-caption">
+							  <h3>Caldas Novas GO - 15/08 > 17/08</h3>
+							  <p>Com águas quentes do balneário, considerado a maior estância hidrotermal do mundo.</p>
+							</div>
+						</div>
+					</div>
+					<!-- Carousel nav -->
+					<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+					</a>
+					<a class="carousel-control right" href="#myCarousel" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					</a>
+				</div>
 			</div>
 		</div>
 	</ui:define>

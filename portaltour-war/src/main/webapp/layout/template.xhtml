@@ -23,6 +23,11 @@
 				content="Portal de vendas de pacotes de turismo!" />
 			<meta name="keywords" content="pacotes, turismo, tour, viajar" />
 			<meta name="author" content="rabsouza" />
+			
+			<!-- Fonts -->
+			<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
+			<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,700italic,400,700" rel="stylesheet" type="text/css"/>
+			<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 	
 			<h:outputStylesheet library="bootstrap/css" name="bootstrap.min.css" />
 			<h:outputStylesheet library="bootstrap/css" name="bootstrap-theme.min.css" />
@@ -30,20 +35,63 @@
 		</h:head>
 	
 		<h:body>
-			<div class="container">
-				<ui:insert name="bodyContent"></ui:insert>
-	
-				<footer>
-					<p><em><h:outputText value="#{msg['app.footer']}" /></em></p>
-				</footer>
+
+			<div class="jumbotron">
+				<div class="container">
+					<div class="col-sm-9">
+						<div class="row">
+								<h1 style="font-weight: bold; text-shadow: #ACA5A5 0.2em 0.1em 0.2em;">
+									<h:outputText value="#{msg['template.header']}" />
+								</h1>
+								<p>
+									<h:outputText value="#{msg['template.header.text']}" />
+								</p>
+							
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="panel panel-default">
+							<div class="panel-heading" style="font-weight: bold;">Contatos</div>
+          					<ul class="list-group" style="max-width: 300px;">
+							  <li class="list-group-item"><span class="glyphicon glyphicon-envelope"> graca.excursao.bh@gmail.com</span></li>
+							  <li class="list-group-item"><span class="glyphicon glyphicon-phone-alt"> (31) 9999-9999</span></li>
+							  <li class="list-group-item"><span class="glyphicon glyphicon-user"> facebook.com/graca.excursao.bh</span></li>
+							</ul>
+						</div>
+			        </div>
+			        <div class="row">
+						<ul class="nav nav-pills nav-justified">
+					      <li class="active"><a href="#">Home</a></li>
+					      <li><a href="#">Eventos</a></li>
+					      <li><a href="#">Opiniões</a></li>
+					      <li><a href="#">Contato</a></li>
+					    </ul>
+					</div>
+				</div>
 			</div>
-	
-			<h:outputScript library="resources/jquery/js" name="jquery.min.js" />
+
+			<div class="container" style="margin-bottom: 30px;">
+				<ui:insert name="bodyBreadcrumb"></ui:insert>
+			
+				<div class="container" >
+					<ui:insert name="bodyContent"></ui:insert>
+				</div>
+			</div>
+
+			<nav class="navbar navbar-default">
+				<div class="container">
+					<footer>
+						<p><em><h:outputText value="#{msg['app.footer']}" /></em></p>
+					</footer>
+				</div>
+			</nav>
+				
+			<h:outputScript library="jquery/js" name="jquery.min.js" />
 			<h:outputScript library="bootstrap/js" name="bootstrap.min.js" />
 			<h:outputScript library="vendor/js" name="modernizr-2.6.2-respond-1.1.0.min.js" />
 			<h:outputScript library="vendor/js" name="plugins.js" />
 			<h:outputScript library="app/js" name="portaltour.js" />
-		</h:body>
+	</h:body>
 
 </f:view>
 </html>
