@@ -12,7 +12,7 @@ body > .jumbotron{
 	margin-bottom: 20px !important;
 }
 
-body > .jumbotron > h1{
+#templateHeader {
 	font-weight: bold !important; 
 	text-shadow: #ACA5A5 0.2em 0.1em 0.2em !important;
 }
@@ -27,6 +27,20 @@ body > .jumbotron > .panel-heading{
 
 body > .container.body{
 	margin-bottom: 20px !important;
+}
+
+#panelContatos {
+	min-width: 300px !important;
+}
+
+#container {
+  margin-bottom: 30px !important;
+}
+
+#footer {
+  min-height: 50px;
+  background-color: #f5f5f5;
+  margin-bottom: 0px;
 }
 
 /*! 

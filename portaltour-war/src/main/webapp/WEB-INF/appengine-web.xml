@@ -3,11 +3,27 @@
 	<application>portal-tour</application>
 	<version>1.0</version>
 
+	<!-- Allows App Engine to send multiple requests to one instance in parallel: -->
 	<threadsafe>true</threadsafe>
 	<sessions-enabled>true</sessions-enabled>
-	<async-session-persistence enabled="false" />
+	<warmup-requests-enabled>true</warmup-requests-enabled>
+	<precompilation-enabled>true</precompilation-enabled>
+	<async-session-persistence enabled="false"
+		queue-name="default" />
 
+	<!-- Configure java.util.logging -->
 	<system-properties>
-		<property name="java.util.logging.config.file" value="WEB-INF/logging.properties" />
+		<property name="java.util.logging.config.file" value="WEB-INF/classes/log4j.properties" />
 	</system-properties>
+
+	<static-files>
+		<include path="/**.gif" expiration="7d" />
+		<include path="/**.png" expiration="7d" />
+		<include path="/**.jpg" expiration="7d" />
+		<include path="/**.ico" expiration="7d" />
+		<include path="/**.js" expiration="7d" />
+		<include path="/**.js.jsf" expiration="7d" />
+		<include path="/**.css.jsf" expiration="7d" />
+		<include path="/**.css" expiration="7d" />
+	</static-files>
 </appengine-web-app>

@@ -38,27 +38,29 @@
 
 			<div class="jumbotron">
 				<div class="container">
-					<div class="col-sm-9">
-						<div class="row">
-								<h1 style="font-weight: bold; text-shadow: #ACA5A5 0.2em 0.1em 0.2em;">
-									<h:outputText value="#{msg['template.header']}" />
-								</h1>
-								<p>
-									<h:outputText value="#{msg['template.header.text']}" />
-								</p>
-							
+					<div class="row">
+						<div class="col-sm-8">
+							<div class="row">
+									<h1 id="templateHeader">
+										<h:outputText value="#{msg['template.header']}" />
+									</h1>
+									<p>
+										<h:outputText value="#{msg['template.header.text']}" />
+									</p>
+								
+							</div>
 						</div>
+						<div class="col-sm-3">
+							<div class="panel panel-default" id="panelContatos">
+								<div class="panel-heading" style="font-weight: bold;">Contatos</div>
+	          					<ul class="list-group">
+								  <li class="list-group-item"><span class="glyphicon glyphicon-envelope"> graca.excursao.bh@gmail.com</span></li>
+								  <li class="list-group-item"><span class="glyphicon glyphicon-phone-alt"> (31)9999-9999</span></li>
+								  <li class="list-group-item"><span class="glyphicon glyphicon-user"> facebook.com/graca.excursao.bh</span></li>
+								</ul>
+							</div>
+				        </div>
 					</div>
-					<div class="col-sm-3">
-						<div class="panel panel-default">
-							<div class="panel-heading" style="font-weight: bold;">Contatos</div>
-          					<ul class="list-group" style="max-width: 300px;">
-							  <li class="list-group-item"><span class="glyphicon glyphicon-envelope"> graca.excursao.bh@gmail.com</span></li>
-							  <li class="list-group-item"><span class="glyphicon glyphicon-phone-alt"> (31) 9999-9999</span></li>
-							  <li class="list-group-item"><span class="glyphicon glyphicon-user"> facebook.com/graca.excursao.bh</span></li>
-							</ul>
-						</div>
-			        </div>
 			        <div class="row">
 						<ul class="nav nav-pills nav-justified">
 					      <li class="active"><a href="#">Home</a></li>
@@ -70,21 +72,23 @@
 				</div>
 			</div>
 
-			<div class="container" style="margin-bottom: 30px;">
-				<ui:insert name="bodyBreadcrumb"></ui:insert>
+			<div id="container" class="container">
+				<div class="row" >
+					<ui:insert name="bodyBreadcrumb"></ui:insert>
+				</div>
 			
-				<div class="container" >
+				<div class="row" >
 					<ui:insert name="bodyContent"></ui:insert>
 				</div>
 			</div>
 
-			<nav class="navbar navbar-default">
+			<div id="footer">
 				<div class="container">
 					<footer>
-						<p><em><h:outputText value="#{msg['app.footer']}" /></em></p>
+						<p><h:outputText value="#{msg['app.footer']}" /></p>
 					</footer>
 				</div>
-			</nav>
+			</div>
 				
 			<h:outputScript library="jquery/js" name="jquery.min.js" />
 			<h:outputScript library="bootstrap/js" name="bootstrap.min.js" />

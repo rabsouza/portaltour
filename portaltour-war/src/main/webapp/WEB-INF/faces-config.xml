@@ -24,6 +24,8 @@
 	<!-- Configura o PhaseListener utilizado para forcar a serializacao da sessao 
 		no App Engine. -->
 	<lifecycle>
-		<phase-listener>br.com.battista.web.config.SessionPhaseListener</phase-listener>
+		<phase-listener>br.com.battista.web.config.SessionPhaseListener
+		</phase-listener>
 	</lifecycle>
+
 </faces-config>
